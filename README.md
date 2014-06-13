@@ -1,5 +1,7 @@
 # Installation
 
+Install [FFmpeg](https://ffmpeg.org/)
+
 Get Flask to run
 
 http://flask.pocoo.org/docs/installation/
