@@ -1,3 +1,9 @@
+# What?
+
+Read the [index.html](https://github.com/freenerd/i-am-sitting-in-a-codec/blob/master/templates/index.html) or check the deployed version at http://bit.ly/sitting-in-a-codec for the description.
+
+Made by Karl and Johan at Music Hack Day Barcelona 2014.
+
 # Installation
 
 Install [FFmpeg](https://ffmpeg.org/)
