@@ -22,6 +22,9 @@ def process(itr):
     if iteration != itr:
         return redirect("/")
 
+    if int(iteration) >= 1000:
+        return redirect("/dl/1000.mp3")
+
     # create new version
     p = "{0}/static/mp3/{1}.mp3"
     current_filepath =  p.format(os.getcwd(), iteration)
