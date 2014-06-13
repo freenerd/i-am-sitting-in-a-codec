@@ -15,12 +15,29 @@
   <h1>I Am Sitting In a Codec</h1>
 
   <div class="blurb">
-    <p>> I am sitting in a room (1969) is one of composer Alvin Lucier's best known works, featuring Lucier recording himself narrating a text, and then playing the recording back into the room, re-recording it. The new recording is then played back and re-recorded, and this process is repeated. Since all rooms have characteristic resonance or formant frequencies (e.g. different between a large hall and a small room), the effect is that certain frequencies are emphasized as they resonate in the room, until eventually the words become unintelligible, replaced by the pure resonant harmonies and tones of the room itself.</p>
 
-    <p>We recreate it here</p>
+  <blockquote class="blockquote">
+I am sitting in a room (1969) is one of composer Alvin Lucier's best known works, featuring Lucier recording himself narrating a text, and then playing the recording back into the room, re-recording it. The new recording is then played back and re-recorded, and this process is repeated. Since all rooms have characteristic resonance or formant frequencies (e.g. different between a large hall and a small room), the effect is that certain frequencies are emphasized as they resonate in the room, until eventually the words become unintelligible, replaced by the pure resonant harmonies and tones of the room itself.
+    <footer><cite><a href="https://en.wikipedia.org/wiki/I_Am_Sitting_in_a_Room">I Am Sitting in a Room -  Wikipedia, the free encyclopedia</a></cite></footer>
+  </blockquote></body>
+
+    <p><em>I am sitting in a codec</em> is a digital rethinking of Alvin Lucier's seminal work <em>I am sitting in a room</em>, the resonant frequencies of Lucier's original room being replaced by the digital artifacts of the mp3 encoder.</p>
+    <!--<p>We recreate it here</p>-->
+  <p>Every download of the mp3 file creates a new mp3 version for the next downloader, degrading in quality bit by bit due to the compression of the mp3 algorithms. Each downloader then gets a new and unique version of the original material, each worse than the one before it, reflecting the old music elitist adage that the more popular a song is the worse it gets. </p>
+
   </div>
 
-  <a href="/download/{{iteration}}" class="download btn btn-success btn-large"><i class="icon-white icon-download-alt"></i> Download iteration {{iteration}}</a>
+  <a href="/process/{{iteration}}" class="download go btn btn-success btn-large">
+    <span class="go">
+      <span class="dl glyphicon glyphicon-download-alt"></span>
+      <span> Download iteration {{iteration}}</span>
+    </span>
+
+    <span class="processing">
+      <i class="fa fa-spinner fa-spin"></i>
+      <span> preparing your version </span>
+    </span>
+  </a>
 </div>
 
 <script src="/static/vendor/jquery-2.1.1.min.js"></script>
