@@ -29,7 +29,7 @@ def process(itr):
     p = "{0}/static/mp3/{1}.mp3"
     current_filepath =  p.format(os.getcwd(), iteration)
     output_filepath = p.format(os.getcwd(), next_iteration)
-    cmd = "ffmpeg -y -vsync 2 -y -i {0} -b:a 64k {1}".format(current_filepath, output_filepath)
+    cmd = "ffmpeg -y -vsync 2 -y -i {0} -b 64k {1}".format(current_filepath, output_filepath)
     os.popen(cmd)
 
     # update iteration count
