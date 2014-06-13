@@ -1,3 +1,5 @@
 $(function() {
-  console.log("TEST");
+  $("a.download").click(function() {
+    console.log("CLICK");
+  })
 });

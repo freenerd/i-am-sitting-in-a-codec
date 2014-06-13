@@ -1,6 +1,6 @@
-import os
+import os, time
 from flask import Flask
-from flask import render_template
+from flask import render_template, redirect
 
 app = Flask(__name__)
 
@@ -11,13 +11,16 @@ def index():
         data = myfile.read()
         return render_template('index.html', iteration=data)
 
-@app.route('/download')
-def download():
+@app.route('/process/<itr>')
+def process(itr):
     # read current iteration
     with open ("state/iteration.txt", "r") as myfile:
         data = myfile.read().replace("\n", "")
         iteration = data
         next_iteration = str(int(iteration)+1)
+
+    if iteration != itr:
+        return redirect("/")
 
     # create new version
     p = "{0}/static/mp3/{1}.mp3"
@@ -30,16 +33,13 @@ def download():
     with open ("state/iteration.txt", "w") as myfile:
         myfile.write(next_iteration)
 
-    # server mp3
-    return app.send_static_file("mp3/{0}.mp3".format(next_iteration))
+    # serve mp3 via redirect
+    return redirect("/dl/{0}.mp3".format(next_iteration))
+
+@app.route('/dl/<itr>.mp3')
+def serve(itr):
+    return app.send_static_file("mp3/{0}.mp3".format(itr))
 
 if __name__ == '__main__':
     app.debug = True
     app.run()
-
-
-
-
-for i in range(0,50):
-    f = os.getcwd()+"/mp3/{0}.mp3"
-    create_iteration(i)
