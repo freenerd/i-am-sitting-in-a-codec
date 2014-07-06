@@ -41,4 +41,6 @@ li {
 
 ul.prev-list {
   margin-top: 10px;
+  padding-left: 0px;
+  display: none;
 }

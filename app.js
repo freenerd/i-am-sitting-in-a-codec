@@ -1,5 +1,5 @@
 $(function() {
-  $("a.download").click(function() {
-    console.log("dl");
+  $("a.previous").click(function() {
+    $("ul.prev-list").toggle();
   })
 });
