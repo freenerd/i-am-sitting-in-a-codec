@@ -34,3 +34,11 @@ footer {
   margin-top: 100px;
   margin-bottom: 20px;
 }
+
+li {
+  list-style-type:none; 
+}
+
+ul.prev-list {
+  margin-top: 10px;
+}
