@@ -1,0 +1,36 @@
+div.box {
+  width: 700px;
+  margin: 20px auto 0 auto;
+}
+
+h1 {
+  margin: 20px auto 20px auto;
+}
+
+blockquote footer {
+  margin-top: 10px;
+}
+
+blockquote {
+  /*font-family: serif;*/
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+a.download {
+  width: 220px;
+}
+
+a.download.go span.processing,
+a.download.processing span.go {
+  display: none;
+}
+
+a.download {
+  margin-top: 10px;
+}
+
+footer {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
